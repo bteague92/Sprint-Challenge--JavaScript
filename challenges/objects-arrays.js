@@ -137,15 +137,6 @@ graduates.forEach(function(items) {
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-// const unisWithUni = graduates.filter(uni => uni.university.includes("Uni"));
-
-// graduates.forEach(function(items) {
-//   return unisWithUni.includes("Uni").push(`${items.university}`);
-// });
-
-// graduates.forEach(function(items) {
-//   return unisWithUni.push(`${items.university.includes("Uni")}`);
-// });
 
 const unisWithUni = [];
 
@@ -154,6 +145,29 @@ for (i = 0; i < graduates.length; i++) {
     unisWithUni.push(graduates[i].university);
   }
 }
+
+// const unisWithUni = graduates.filter(uni => uni.university.includes("Uni"));
+
+// graduates.forEach(function(items) {
+//   return unisWithUni.includes("Uni").push(`${items.university}`);
+// });
+
+
+// graduates.forEach(function(items) {
+//   return unisWithUni.push(`${items.university.includes("Uni")}`);
+// });
+
+
+// function checkForUni(arr) {
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i].university.includes("Uni")) {
+//       return unisWithUni.push(arr[i].university);
+//     }
+//   }
+// }
+
+
+// checkForUni(graduates);
 console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
@@ -243,7 +257,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 let lowCaseAnimalNames = zooAnimals.map(animal =>
-  animal.animal_name.toUpperCase()
+  animal.animal_name.toLowerCase()
 );
 
 console.log(lowCaseAnimalNames);
